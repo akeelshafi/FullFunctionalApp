@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.akeel.fullfunctionalapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.akeel.fullfunctionalapp"
