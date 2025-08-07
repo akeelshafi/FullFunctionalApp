@@ -12,38 +12,51 @@
         android:id="@+id/logInTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="120dp"
         android:layout_marginBottom="30dp"
         android:gravity="center"
         android:text="LogIn"
         android:textColor="@color/black"
         android:textSize="50sp"
         android:textStyle="bold" />
+    <EditText
+        android:id="@+id/nameEdtTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/textviewbackground"
+        android:drawableEnd="@drawable/baseline_person_24"
+        android:ems="10"
+        android:hint="Enter Your Name"
+        android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
     <EditText
-        android:id="@+id/emailTxt"
+        android:id="@+id/emailEdtTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/textviewbackground"
         android:drawableEnd="@drawable/baseline_email_24"
         android:ems="10"
-        android:hint="Email"
+        android:hint="Enter Your Email"
         android:inputType="textEmailAddress"
-        android:padding="12dp"
+        android:padding="16dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/passwordEdtTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/textviewbackground"
         android:drawableEnd="@drawable/baseline_remove_red_eye_24"
-        android:hint="password"
+        android:hint="Enter Your Password"
         android:inputType="textPassword"
-        android:padding="12dp"
+        android:padding="16dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
