@@ -5,9 +5,9 @@
         android:endColor="@color/white">
     </gradient>
     <size
-        android:height="60dp">
+        android:height="60sp">
     </size>
     <corners
-        android:radius="20dp"/>
+        android:radius="6dp"/>
 
 </shape>
