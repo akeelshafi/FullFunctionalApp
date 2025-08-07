@@ -1,5 +1,6 @@
 package com
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -42,17 +43,18 @@ class LoginInActivity : AppCompatActivity() {
                     emailEdtTxt.text.clear()
                     passwordEdtTxt.text.clear()
 
+
                     Toast.makeText(this, "User Registered Successfully", Toast.LENGTH_SHORT).show()
+                    intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    finish()
+
 
                 }
                 .addOnFailureListener {
                     Toast.makeText(this, "Failed to Register", Toast.LENGTH_SHORT).show()
 
-
                 }
-
-
-
 
 
         }
