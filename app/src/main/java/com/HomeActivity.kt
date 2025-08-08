@@ -1,6 +1,7 @@
 package com
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,5 +18,16 @@ class HomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val name = intent.getStringExtra(SignUPActivity.KEY1)
+        val email = intent.getStringExtra(SignUPActivity.KEY2)
+        val password = intent.getStringExtra(SignUPActivity.KEY3)
+
+        findViewById<TextView>(R.id.welcomeTv).text = "Welcome $name"
+        findViewById<TextView>(R.id.nameTv).text = name
+        findViewById<TextView>(R.id.emailTv).text = email
+
+
+
+
     }
 }

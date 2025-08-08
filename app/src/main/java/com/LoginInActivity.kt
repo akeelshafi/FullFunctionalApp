@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,7 +15,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class LoginInActivity : AppCompatActivity() {
-    lateinit var database: DatabaseReference
+    private lateinit var database: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -29,6 +30,7 @@ class LoginInActivity : AppCompatActivity() {
         val nameEdtTxt = findViewById<EditText>(R.id.nameEdtTxt)
         val emailEdtTxt = findViewById<EditText>(R.id.emailEdtTxt)
         val passwordEdtTxt = findViewById<EditText>(R.id.passwordEdtTxt)
+        val signInTv = findViewById<TextView>(R.id.signInTv)
 
         signInBtn.setOnClickListener {
             val name = nameEdtTxt.text.toString()
@@ -45,10 +47,6 @@ class LoginInActivity : AppCompatActivity() {
 
 
                     Toast.makeText(this, "User Registered Successfully", Toast.LENGTH_SHORT).show()
-                    intent = Intent(this, HomeActivity::class.java)
-                    startActivity(intent)
-                    finish()
-
 
                 }
                 .addOnFailureListener {
@@ -58,5 +56,11 @@ class LoginInActivity : AppCompatActivity() {
 
 
         }
+
+        signInTv.setOnClickListener {
+            val intent = Intent(this, SignUPActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
