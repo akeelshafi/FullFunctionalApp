@@ -20,7 +20,7 @@
         android:textSize="50sp"
         android:textStyle="bold" />
 
-   <!-- <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Your Name"
@@ -29,7 +29,7 @@
         app:hintTextColor="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/SignUpnameEdtTxt"
+            android:id="@+id/SignInNameEdtTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -40,9 +40,9 @@
             android:drawableEnd="@drawable/baseline_person_24"
             />
 
-    </com.google.android.material.textfield.TextInputLayout>-->
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
+   <!-- <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Your Email"
@@ -63,7 +63,7 @@
             android:drawableEnd="@drawable/baseline_email_24"
             />
 
-    </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"

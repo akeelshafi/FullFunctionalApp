@@ -34,17 +34,17 @@ class SignUPActivity : AppCompatActivity() {
         }
 
         val signUpBtn = findViewById<Button>(R.id.signUpBtn)
-        val emailEdtTxt = findViewById<EditText>(R.id.SignInEmailEdtTxt)
+        val nameEdtTxt = findViewById<EditText>(R.id.SignInNameEdtTxt)
         val passwordEdtTxt = findViewById<EditText>(R.id.SignUppasswordEdtTxt)
         val signUp = findViewById<TextView>(R.id.signUpTv)
 
         signUpBtn.setOnClickListener {
-            val email = emailEdtTxt.text.toString()
+            val name = nameEdtTxt.text.toString()
             val password = passwordEdtTxt.text.toString()
 
-            if (email.isNotEmpty() && password.isNotEmpty()) {
+            if (name.isNotEmpty() && password.isNotEmpty()) {
 
-                readData(email, password)
+                readData(name, password)
 
             } else {
                 Toast.makeText(this, "Please Enter Email And Password", Toast.LENGTH_SHORT).show()
@@ -61,11 +61,11 @@ class SignUPActivity : AppCompatActivity() {
 
     }
 
-    private fun readData(email: String, password: String) {
+    private fun readData(name: String, password: String) {
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Users")
 
-        databaseReference.child(email).get().addOnSuccessListener {
+        databaseReference.child(name).get().addOnSuccessListener {
             if (it.exists()) {
                 val nameDB = it.child("name").value
                 val emailDB = it.child("email").value
@@ -76,7 +76,6 @@ class SignUPActivity : AppCompatActivity() {
                 intent.putExtra(KEY2, emailDB.toString())
                 intent.putExtra(KEY3, passwordDB.toString())
                 startActivity(intent)
-
 
 
             } else {

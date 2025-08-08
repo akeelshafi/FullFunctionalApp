@@ -20,13 +20,15 @@ class HomeActivity : AppCompatActivity() {
         }
         val name = intent.getStringExtra(SignUPActivity.KEY1)
         val email = intent.getStringExtra(SignUPActivity.KEY2)
-        val password = intent.getStringExtra(SignUPActivity.KEY3)
-
-        findViewById<TextView>(R.id.welcomeTv).text = "Welcome $name"
-        findViewById<TextView>(R.id.nameTv).text = name
-        findViewById<TextView>(R.id.emailTv).text = email
 
 
+        val welcomeTxt = findViewById<TextView>(R.id.welcomeTv)
+        val mailTxt = findViewById<TextView>(R.id.emailTv)
+        val userName = findViewById<TextView>(R.id.nameTv)
+
+        welcomeTxt.text ="Welcome $name"
+        mailTxt.text ="Email: $email"
+        userName.text="Name: $name"
 
 
     }
